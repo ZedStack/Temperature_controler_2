@@ -14,9 +14,17 @@
  * =========================================================
  */
 
-public void MenuButton_click(GImageButton source, GEvent event) { //_CODE_:menuButton:752145:
-  println("imgButton1 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:menuButton:752145:
+public void imgTogButton1_click1(GImageToggleButton source, GEvent event) { //_CODE_:imgTogButton1:830991:
+  println("imgTogButton1 - GImageToggleButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgTogButton1:830991:
+
+public void imgTogButton2_click1(GImageToggleButton source, GEvent event) { //_CODE_:imgTogButton2:601499:
+  println("imgTogButton2 - GImageToggleButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgTogButton2:601499:
+
+public void button1_click1(GButton source, GEvent event) { //_CODE_:button1:449451:
+  println("button1 - GButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:button1:449451:
 
 
 
@@ -27,135 +35,41 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setCursor(ARROW);
   surface.setTitle("Sketch Window");
-  menuButton = new GImageButton(this, 16, 400, 64, 64, new String[] { "icon-cog.png", "icon-cog.png", "icon-cog.png" } );
-  menuButton.addEventHandler(this, "MenuButton_click");
-  fireAlarmLabel = new GLabel(this, 96, 320, 144, 64);
-  fireAlarmLabel.setText("Fire Alarm");
-  fireAlarmLabel.setTextBold();
-  fireAlarmLabel.setOpaque(true);
-  modeLabel = new GLabel(this, 96, 400, 144, 64);
-  modeLabel.setText("Cold / Hot Mode");
-  modeLabel.setTextBold();
-  modeLabel.setOpaque(true);
-  machineFailureLabel = new GLabel(this, 256, 320, 144, 64);
-  machineFailureLabel.setText("Machine failure");
-  machineFailureLabel.setTextBold();
-  machineFailureLabel.setOpaque(true);
-  fanLablel = new GLabel(this, 256, 400, 144, 64);
-  fanLablel.setText("Fan");
-  fanLablel.setTextBold();
-  fanLablel.setOpaque(true);
-  airTemperatureLabel = new GLabel(this, 416, 320, 144, 64);
-  airTemperatureLabel.setText("Air temperature");
-  airTemperatureLabel.setTextBold();
-  airTemperatureLabel.setOpaque(true);
-  compressorLabel = new GLabel(this, 416, 400, 64, 64);
-  compressorLabel.setText("Compressor");
-  compressorLabel.setTextBold();
-  compressorLabel.setOpaque(true);
-  injectorValveLabel = new GLabel(this, 496, 400, 64, 64);
-  injectorValveLabel.setText("Injector");
-  injectorValveLabel.setTextBold();
-  injectorValveLabel.setOpaque(true);
-  sensorTemperatureLabel1 = new GLabel(this, 704, 16, 80, 32);
-  sensorTemperatureLabel1.setText("24.0 °C");
-  sensorTemperatureLabel1.setTextBold();
-  sensorTemperatureLabel1.setOpaque(true);
-  sensorTemperatureLabel2 = new GLabel(this, 704, 64, 80, 32);
-  sensorTemperatureLabel2.setText("24.0 °C");
-  sensorTemperatureLabel2.setTextBold();
-  sensorTemperatureLabel2.setOpaque(true);
-  sensorTemperatureLabel3 = new GLabel(this, 704, 112, 80, 32);
-  sensorTemperatureLabel3.setText("24.0 °C");
-  sensorTemperatureLabel3.setTextBold();
-  sensorTemperatureLabel3.setOpaque(true);
-  sensorTemperatureLabel4 = new GLabel(this, 704, 160, 80, 32);
-  sensorTemperatureLabel4.setText("24.0 °C");
-  sensorTemperatureLabel4.setTextBold();
-  sensorTemperatureLabel4.setOpaque(true);
-  sensorTemperatureLabel5 = new GLabel(this, 704, 208, 80, 32);
-  sensorTemperatureLabel5.setText("24.0 °C");
-  sensorTemperatureLabel5.setTextBold();
-  sensorTemperatureLabel5.setOpaque(true);
-  sensorTemperatureLabel6 = new GLabel(this, 704, 256, 80, 32);
-  sensorTemperatureLabel6.setText("24.0 °C");
-  sensorTemperatureLabel6.setTextBold();
-  sensorTemperatureLabel6.setOpaque(true);
-  sensorLabel1 = new GLabel(this, 608, 16, 80, 32);
-  sensorLabel1.setText("Sensor #1");
-  sensorLabel1.setTextBold();
-  sensorLabel1.setOpaque(true);
-  sensorLabel2 = new GLabel(this, 608, 64, 80, 32);
-  sensorLabel2.setText("Sensor #2");
-  sensorLabel2.setTextBold();
-  sensorLabel2.setOpaque(true);
-  sensorLabel3 = new GLabel(this, 608, 112, 80, 32);
-  sensorLabel3.setText("Sensor #3");
-  sensorLabel3.setTextBold();
-  sensorLabel3.setOpaque(true);
-  sensorLabel4 = new GLabel(this, 608, 160, 80, 32);
-  sensorLabel4.setText("Sensor #4");
-  sensorLabel4.setTextBold();
-  sensorLabel4.setOpaque(true);
-  sensorLabel5 = new GLabel(this, 608, 208, 80, 32);
-  sensorLabel5.setText("Sensor #5");
-  sensorLabel5.setTextBold();
-  sensorLabel5.setOpaque(true);
-  sensorLabel6 = new GLabel(this, 608, 256, 80, 32);
-  sensorLabel6.setText("Sensor #6");
-  sensorLabel6.setTextBold();
-  sensorLabel6.setOpaque(true);
-  ventLabel1 = new GLabel(this, 576, 320, 96, 32);
-  ventLabel1.setText("vent #1 colsed");
-  ventLabel1.setTextBold();
-  ventLabel1.setOpaque(true);
-  ventLabel2 = new GLabel(this, 576, 368, 96, 32);
-  ventLabel2.setText("vent #2 colsed");
-  ventLabel2.setTextBold();
-  ventLabel2.setOpaque(true);
-  ventLabel3 = new GLabel(this, 576, 416, 96, 32);
-  ventLabel3.setText("vent #3 colsed");
-  ventLabel3.setTextBold();
-  ventLabel3.setOpaque(true);
-  ventLabel4 = new GLabel(this, 688, 320, 96, 32);
-  ventLabel4.setText("vent #4 colsed");
-  ventLabel4.setTextBold();
-  ventLabel4.setOpaque(true);
-  ventLabel5 = new GLabel(this, 688, 368, 96, 32);
-  ventLabel5.setText("vent #5 colsed");
-  ventLabel5.setTextBold();
-  ventLabel5.setOpaque(true);
-  ventLabel6 = new GLabel(this, 688, 416, 96, 32);
-  ventLabel6.setText("vent #6 colsed");
-  ventLabel6.setTextBold();
-  ventLabel6.setOpaque(true);
+  label1 = new GLabel(this, 16, 16, 80, 32);
+  label1.setText("My label");
+  label1.setOpaque(false);
+  label2 = new GLabel(this, 16, 64, 80, 32);
+  label2.setText("My label");
+  label2.setOpaque(false);
+  label3 = new GLabel(this, 16, 112, 80, 32);
+  label3.setText("My label");
+  label3.setOpaque(false);
+  label4 = new GLabel(this, 16, 160, 80, 32);
+  label4.setText("My label");
+  label4.setOpaque(false);
+  label5 = new GLabel(this, 16, 208, 80, 32);
+  label5.setText("My label");
+  label5.setOpaque(false);
+  label6 = new GLabel(this, 16, 256, 80, 32);
+  label6.setText("My label");
+  label6.setOpaque(false);
+  imgTogButton1 = new GImageToggleButton(this, 112, 16, "open_closed.png", 1, 2);
+  imgTogButton1.addEventHandler(this, "imgTogButton1_click1");
+  imgTogButton2 = new GImageToggleButton(this, 208, 16, "auto_manual.png", 1, 2);
+  imgTogButton2.addEventHandler(this, "imgTogButton2_click1");
+  button1 = new GButton(this, 16, 400, 64, 64);
+  button1.setText("Face text");
+  button1.addEventHandler(this, "button1_click1");
 }
 
 // Variable declarations 
 // autogenerated do not edit
-GImageButton menuButton; 
-GLabel fireAlarmLabel; 
-GLabel modeLabel; 
-GLabel machineFailureLabel; 
-GLabel fanLablel; 
-GLabel airTemperatureLabel; 
-GLabel compressorLabel; 
-GLabel injectorValveLabel; 
-GLabel sensorTemperatureLabel1; 
-GLabel sensorTemperatureLabel2; 
-GLabel sensorTemperatureLabel3; 
-GLabel sensorTemperatureLabel4; 
-GLabel sensorTemperatureLabel5; 
-GLabel sensorTemperatureLabel6; 
-GLabel sensorLabel1; 
-GLabel sensorLabel2; 
-GLabel sensorLabel3; 
-GLabel sensorLabel4; 
-GLabel sensorLabel5; 
-GLabel sensorLabel6; 
-GLabel ventLabel1; 
-GLabel ventLabel2; 
-GLabel ventLabel3; 
-GLabel ventLabel4; 
-GLabel ventLabel5; 
-GLabel ventLabel6; 
+GLabel label1; 
+GLabel label2; 
+GLabel label3; 
+GLabel label4; 
+GLabel label5; 
+GLabel label6; 
+GImageToggleButton imgTogButton1; 
+GImageToggleButton imgTogButton2; 
+GButton button1; 
