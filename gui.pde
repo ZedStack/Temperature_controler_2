@@ -14,53 +14,49 @@
  * =========================================================
  */
 
-public void imgButton1_click1(GImageButton source, GEvent event) { //_CODE_:imgButton1:494570:
+public void imgButton1_click1(GImageButton source, GEvent event) { //_CODE_:imgButton1:299846:
   println("imgButton1 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton1:494570:
+} //_CODE_:imgButton1:299846:
 
-public void imgButton2_click1(GImageButton source, GEvent event) { //_CODE_:imgButton2:990932:
+public void imgButton2_click1(GImageButton source, GEvent event) { //_CODE_:imgButton2:963997:
   println("imgButton2 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton2:990932:
+} //_CODE_:imgButton2:963997:
 
-public void imgButton3_click1(GImageButton source, GEvent event) { //_CODE_:imgButton3:271901:
+public void imgButton3_click1(GImageButton source, GEvent event) { //_CODE_:imgButton3:241459:
   println("imgButton3 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton3:271901:
+} //_CODE_:imgButton3:241459:
 
-public void imgButton4_click1(GImageButton source, GEvent event) { //_CODE_:imgButton4:525454:
+public void imgButton4_click1(GImageButton source, GEvent event) { //_CODE_:imgButton4:680669:
   println("imgButton4 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton4:525454:
+} //_CODE_:imgButton4:680669:
 
-public void imgButton5_click1(GImageButton source, GEvent event) { //_CODE_:imgButton5:287048:
+public void imgButton5_click1(GImageButton source, GEvent event) { //_CODE_:imgButton5:585154:
   println("imgButton5 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton5:287048:
+} //_CODE_:imgButton5:585154:
 
-public void imgButton6_click1(GImageButton source, GEvent event) { //_CODE_:imgButton6:502499:
+public void imgButton6_click1(GImageButton source, GEvent event) { //_CODE_:imgButton6:322038:
   println("imgButton6 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton6:502499:
+} //_CODE_:imgButton6:322038:
 
-public void imgButton7_click1(GImageButton source, GEvent event) { //_CODE_:imgButton7:757862:
+public void imgButton7_click1(GImageButton source, GEvent event) { //_CODE_:imgButton7:952675:
   println("imgButton7 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton7:757862:
+} //_CODE_:imgButton7:952675:
 
-public void imgButton8_click1(GImageButton source, GEvent event) { //_CODE_:imgButton8:278914:
+public void imgButton8_click1(GImageButton source, GEvent event) { //_CODE_:imgButton8:983221:
   println("imgButton8 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton8:278914:
+} //_CODE_:imgButton8:983221:
 
-public void imgButton9_click1(GImageButton source, GEvent event) { //_CODE_:imgButton9:872607:
+public void imgButton9_click1(GImageButton source, GEvent event) { //_CODE_:imgButton9:224907:
   println("imgButton9 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton9:872607:
+} //_CODE_:imgButton9:224907:
 
-public void imgButton10_click1(GImageButton source, GEvent event) { //_CODE_:imgButton10:618908:
+public void imgButton10_click1(GImageButton source, GEvent event) { //_CODE_:imgButton10:961906:
   println("imgButton10 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton10:618908:
+} //_CODE_:imgButton10:961906:
 
-public void imgButton11_click1(GImageButton source, GEvent event) { //_CODE_:imgButton11:798554:
+public void imgButton11_click1(GImageButton source, GEvent event) { //_CODE_:imgButton11:968800:
   println("imgButton11 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton11:798554:
-
-public void imgButton12_click1(GImageButton source, GEvent event) { //_CODE_:imgButton12:787891:
-  println("imgButton12 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:imgButton12:787891:
+} //_CODE_:imgButton11:968800:
 
 
 
@@ -71,7 +67,7 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setCursor(ARROW);
   surface.setTitle("Sketch Window");
-  imgButton1 = new GImageButton(this, 32, 96, new String[] { "number 1.png", "number 1.png", "number 1.png" } );
+  imgButton1 = new GImageButton(this, 32, 96, new String[] { "number 1.png", "number 1.png", "number 1.png" } , "Dial alpha mask.png");
   imgButton1.addEventHandler(this, "imgButton1_click1");
   imgButton2 = new GImageButton(this, 112, 96, new String[] { "number 2.png", "number 2.png", "number 2.png" } );
   imgButton2.addEventHandler(this, "imgButton2_click1");
@@ -91,10 +87,8 @@ public void createGUI(){
   imgButton9.addEventHandler(this, "imgButton9_click1");
   imgButton10 = new GImageButton(this, 32, 336, new String[] { "back.png", "back.png", "back.png" } );
   imgButton10.addEventHandler(this, "imgButton10_click1");
-  imgButton11 = new GImageButton(this, 112, 336, new String[] { "number 0.png", "number 0.png", "number 0.png" } );
+  imgButton11 = new GImageButton(this, 192, 336, new String[] { "number 0.png", "number 0.png", "number 0.png" } );
   imgButton11.addEventHandler(this, "imgButton11_click1");
-  imgButton12 = new GImageButton(this, 192, 336, new String[] { "check.png", "check.png", "check.png" } );
-  imgButton12.addEventHandler(this, "imgButton12_click1");
 }
 
 // Variable declarations 
@@ -110,4 +104,3 @@ GImageButton imgButton8;
 GImageButton imgButton9; 
 GImageButton imgButton10; 
 GImageButton imgButton11; 
-GImageButton imgButton12; 

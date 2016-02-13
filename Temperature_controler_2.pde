@@ -25,7 +25,7 @@ void setup() {
 }
 
 void draw() {
-	background(20);
+	background(170);
 	// complex.render ();
 }
 
