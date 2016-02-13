@@ -95,18 +95,6 @@ public void createGUI(){
   imgButton11.addEventHandler(this, "imgButton11_click1");
   imgButton12 = new GImageButton(this, 192, 336, new String[] { "check.png", "check.png", "check.png" } );
   imgButton12.addEventHandler(this, "imgButton12_click1");
-  label1 = new GLabel(this, 16, 16, 64, 64);
-  label1.setIcon("asterisk.png", 1, GAlign.LEFT, GAlign.MIDDLE);
-  label1.setOpaque(false);
-  label2 = new GLabel(this, 80, 16, 64, 64);
-  label2.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
-  label2.setOpaque(false);
-  label3 = new GLabel(this, 144, 16, 64, 64);
-  label3.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
-  label3.setOpaque(false);
-  label4 = new GLabel(this, 208, 16, 64, 64);
-  label4.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
-  label4.setOpaque(false);
 }
 
 // Variable declarations 
@@ -123,7 +111,3 @@ GImageButton imgButton9;
 GImageButton imgButton10; 
 GImageButton imgButton11; 
 GImageButton imgButton12; 
-GLabel label1; 
-GLabel label2; 
-GLabel label3; 
-GLabel label4; 
