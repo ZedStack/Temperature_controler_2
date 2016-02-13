@@ -14,9 +14,53 @@
  * =========================================================
  */
 
-public void MenuButton_click(GImageButton source, GEvent event) { //_CODE_:menuButton:752145:
+public void imgButton1_click1(GImageButton source, GEvent event) { //_CODE_:imgButton1:494570:
   println("imgButton1 - GImageButton >> GEvent." + event + " @ " + millis());
-} //_CODE_:menuButton:752145:
+} //_CODE_:imgButton1:494570:
+
+public void imgButton2_click1(GImageButton source, GEvent event) { //_CODE_:imgButton2:990932:
+  println("imgButton2 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton2:990932:
+
+public void imgButton3_click1(GImageButton source, GEvent event) { //_CODE_:imgButton3:271901:
+  println("imgButton3 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton3:271901:
+
+public void imgButton4_click1(GImageButton source, GEvent event) { //_CODE_:imgButton4:525454:
+  println("imgButton4 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton4:525454:
+
+public void imgButton5_click1(GImageButton source, GEvent event) { //_CODE_:imgButton5:287048:
+  println("imgButton5 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton5:287048:
+
+public void imgButton6_click1(GImageButton source, GEvent event) { //_CODE_:imgButton6:502499:
+  println("imgButton6 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton6:502499:
+
+public void imgButton7_click1(GImageButton source, GEvent event) { //_CODE_:imgButton7:757862:
+  println("imgButton7 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton7:757862:
+
+public void imgButton8_click1(GImageButton source, GEvent event) { //_CODE_:imgButton8:278914:
+  println("imgButton8 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton8:278914:
+
+public void imgButton9_click1(GImageButton source, GEvent event) { //_CODE_:imgButton9:872607:
+  println("imgButton9 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton9:872607:
+
+public void imgButton10_click1(GImageButton source, GEvent event) { //_CODE_:imgButton10:618908:
+  println("imgButton10 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton10:618908:
+
+public void imgButton11_click1(GImageButton source, GEvent event) { //_CODE_:imgButton11:798554:
+  println("imgButton11 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton11:798554:
+
+public void imgButton12_click1(GImageButton source, GEvent event) { //_CODE_:imgButton12:787891:
+  println("imgButton12 - GImageButton >> GEvent." + event + " @ " + millis());
+} //_CODE_:imgButton12:787891:
 
 
 
@@ -27,135 +71,59 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setCursor(ARROW);
   surface.setTitle("Sketch Window");
-  menuButton = new GImageButton(this, 16, 400, 64, 64, new String[] { "icon-cog.png", "icon-cog.png", "icon-cog.png" } );
-  menuButton.addEventHandler(this, "MenuButton_click");
-  fireAlarmLabel = new GLabel(this, 96, 320, 144, 64);
-  fireAlarmLabel.setText("Fire Alarm");
-  fireAlarmLabel.setTextBold();
-  fireAlarmLabel.setOpaque(true);
-  modeLabel = new GLabel(this, 96, 400, 144, 64);
-  modeLabel.setText("Cold / Hot Mode");
-  modeLabel.setTextBold();
-  modeLabel.setOpaque(true);
-  machineFailureLabel = new GLabel(this, 256, 320, 144, 64);
-  machineFailureLabel.setText("Machine failure");
-  machineFailureLabel.setTextBold();
-  machineFailureLabel.setOpaque(true);
-  fanLablel = new GLabel(this, 256, 400, 144, 64);
-  fanLablel.setText("Fan");
-  fanLablel.setTextBold();
-  fanLablel.setOpaque(true);
-  airTemperatureLabel = new GLabel(this, 416, 320, 144, 64);
-  airTemperatureLabel.setText("Air temperature");
-  airTemperatureLabel.setTextBold();
-  airTemperatureLabel.setOpaque(true);
-  compressorLabel = new GLabel(this, 416, 400, 64, 64);
-  compressorLabel.setText("Compressor");
-  compressorLabel.setTextBold();
-  compressorLabel.setOpaque(true);
-  injectorValveLabel = new GLabel(this, 496, 400, 64, 64);
-  injectorValveLabel.setText("Injector");
-  injectorValveLabel.setTextBold();
-  injectorValveLabel.setOpaque(true);
-  sensorTemperatureLabel1 = new GLabel(this, 704, 16, 80, 32);
-  sensorTemperatureLabel1.setText("24.0 °C");
-  sensorTemperatureLabel1.setTextBold();
-  sensorTemperatureLabel1.setOpaque(true);
-  sensorTemperatureLabel2 = new GLabel(this, 704, 64, 80, 32);
-  sensorTemperatureLabel2.setText("24.0 °C");
-  sensorTemperatureLabel2.setTextBold();
-  sensorTemperatureLabel2.setOpaque(true);
-  sensorTemperatureLabel3 = new GLabel(this, 704, 112, 80, 32);
-  sensorTemperatureLabel3.setText("24.0 °C");
-  sensorTemperatureLabel3.setTextBold();
-  sensorTemperatureLabel3.setOpaque(true);
-  sensorTemperatureLabel4 = new GLabel(this, 704, 160, 80, 32);
-  sensorTemperatureLabel4.setText("24.0 °C");
-  sensorTemperatureLabel4.setTextBold();
-  sensorTemperatureLabel4.setOpaque(true);
-  sensorTemperatureLabel5 = new GLabel(this, 704, 208, 80, 32);
-  sensorTemperatureLabel5.setText("24.0 °C");
-  sensorTemperatureLabel5.setTextBold();
-  sensorTemperatureLabel5.setOpaque(true);
-  sensorTemperatureLabel6 = new GLabel(this, 704, 256, 80, 32);
-  sensorTemperatureLabel6.setText("24.0 °C");
-  sensorTemperatureLabel6.setTextBold();
-  sensorTemperatureLabel6.setOpaque(true);
-  sensorLabel1 = new GLabel(this, 608, 16, 80, 32);
-  sensorLabel1.setText("Sensor #1");
-  sensorLabel1.setTextBold();
-  sensorLabel1.setOpaque(true);
-  sensorLabel2 = new GLabel(this, 608, 64, 80, 32);
-  sensorLabel2.setText("Sensor #2");
-  sensorLabel2.setTextBold();
-  sensorLabel2.setOpaque(true);
-  sensorLabel3 = new GLabel(this, 608, 112, 80, 32);
-  sensorLabel3.setText("Sensor #3");
-  sensorLabel3.setTextBold();
-  sensorLabel3.setOpaque(true);
-  sensorLabel4 = new GLabel(this, 608, 160, 80, 32);
-  sensorLabel4.setText("Sensor #4");
-  sensorLabel4.setTextBold();
-  sensorLabel4.setOpaque(true);
-  sensorLabel5 = new GLabel(this, 608, 208, 80, 32);
-  sensorLabel5.setText("Sensor #5");
-  sensorLabel5.setTextBold();
-  sensorLabel5.setOpaque(true);
-  sensorLabel6 = new GLabel(this, 608, 256, 80, 32);
-  sensorLabel6.setText("Sensor #6");
-  sensorLabel6.setTextBold();
-  sensorLabel6.setOpaque(true);
-  ventLabel1 = new GLabel(this, 576, 320, 96, 32);
-  ventLabel1.setText("vent #1 colsed");
-  ventLabel1.setTextBold();
-  ventLabel1.setOpaque(true);
-  ventLabel2 = new GLabel(this, 576, 368, 96, 32);
-  ventLabel2.setText("vent #2 colsed");
-  ventLabel2.setTextBold();
-  ventLabel2.setOpaque(true);
-  ventLabel3 = new GLabel(this, 576, 416, 96, 32);
-  ventLabel3.setText("vent #3 colsed");
-  ventLabel3.setTextBold();
-  ventLabel3.setOpaque(true);
-  ventLabel4 = new GLabel(this, 688, 320, 96, 32);
-  ventLabel4.setText("vent #4 colsed");
-  ventLabel4.setTextBold();
-  ventLabel4.setOpaque(true);
-  ventLabel5 = new GLabel(this, 688, 368, 96, 32);
-  ventLabel5.setText("vent #5 colsed");
-  ventLabel5.setTextBold();
-  ventLabel5.setOpaque(true);
-  ventLabel6 = new GLabel(this, 688, 416, 96, 32);
-  ventLabel6.setText("vent #6 colsed");
-  ventLabel6.setTextBold();
-  ventLabel6.setOpaque(true);
+  imgButton1 = new GImageButton(this, 32, 96, new String[] { "number 1.png", "number 1.png", "number 1.png" } );
+  imgButton1.addEventHandler(this, "imgButton1_click1");
+  imgButton2 = new GImageButton(this, 112, 96, new String[] { "number 2.png", "number 2.png", "number 2.png" } );
+  imgButton2.addEventHandler(this, "imgButton2_click1");
+  imgButton3 = new GImageButton(this, 192, 96, new String[] { "number 3.png", "number 3.png", "number 3.png" } );
+  imgButton3.addEventHandler(this, "imgButton3_click1");
+  imgButton4 = new GImageButton(this, 32, 176, new String[] { "number 4.png", "number 4.png", "number 4.png" } );
+  imgButton4.addEventHandler(this, "imgButton4_click1");
+  imgButton5 = new GImageButton(this, 112, 176, new String[] { "number 5.png", "number 5.png", "number 5.png" } );
+  imgButton5.addEventHandler(this, "imgButton5_click1");
+  imgButton6 = new GImageButton(this, 192, 176, new String[] { "number 6.png", "number 6.png", "number 6.png" } );
+  imgButton6.addEventHandler(this, "imgButton6_click1");
+  imgButton7 = new GImageButton(this, 32, 256, new String[] { "number 7.png", "number 7.png", "number 7.png" } );
+  imgButton7.addEventHandler(this, "imgButton7_click1");
+  imgButton8 = new GImageButton(this, 112, 256, new String[] { "number 8.png", "number 8.png", "number 8.png" } );
+  imgButton8.addEventHandler(this, "imgButton8_click1");
+  imgButton9 = new GImageButton(this, 192, 256, new String[] { "number 9.png", "number 9.png", "number 9.png" } );
+  imgButton9.addEventHandler(this, "imgButton9_click1");
+  imgButton10 = new GImageButton(this, 32, 336, new String[] { "back.png", "back.png", "back.png" } );
+  imgButton10.addEventHandler(this, "imgButton10_click1");
+  imgButton11 = new GImageButton(this, 112, 336, new String[] { "number 0.png", "number 0.png", "number 0.png" } );
+  imgButton11.addEventHandler(this, "imgButton11_click1");
+  imgButton12 = new GImageButton(this, 192, 336, new String[] { "check.png", "check.png", "check.png" } );
+  imgButton12.addEventHandler(this, "imgButton12_click1");
+  label1 = new GLabel(this, 16, 16, 64, 64);
+  label1.setIcon("asterisk.png", 1, GAlign.LEFT, GAlign.MIDDLE);
+  label1.setOpaque(false);
+  label2 = new GLabel(this, 80, 16, 64, 64);
+  label2.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
+  label2.setOpaque(false);
+  label3 = new GLabel(this, 144, 16, 64, 64);
+  label3.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
+  label3.setOpaque(false);
+  label4 = new GLabel(this, 208, 16, 64, 64);
+  label4.setIcon("asterisk.png", 1, GAlign.RIGHT, GAlign.MIDDLE);
+  label4.setOpaque(false);
 }
 
 // Variable declarations 
 // autogenerated do not edit
-GImageButton menuButton; 
-GLabel fireAlarmLabel; 
-GLabel modeLabel; 
-GLabel machineFailureLabel; 
-GLabel fanLablel; 
-GLabel airTemperatureLabel; 
-GLabel compressorLabel; 
-GLabel injectorValveLabel; 
-GLabel sensorTemperatureLabel1; 
-GLabel sensorTemperatureLabel2; 
-GLabel sensorTemperatureLabel3; 
-GLabel sensorTemperatureLabel4; 
-GLabel sensorTemperatureLabel5; 
-GLabel sensorTemperatureLabel6; 
-GLabel sensorLabel1; 
-GLabel sensorLabel2; 
-GLabel sensorLabel3; 
-GLabel sensorLabel4; 
-GLabel sensorLabel5; 
-GLabel sensorLabel6; 
-GLabel ventLabel1; 
-GLabel ventLabel2; 
-GLabel ventLabel3; 
-GLabel ventLabel4; 
-GLabel ventLabel5; 
-GLabel ventLabel6; 
+GImageButton imgButton1; 
+GImageButton imgButton2; 
+GImageButton imgButton3; 
+GImageButton imgButton4; 
+GImageButton imgButton5; 
+GImageButton imgButton6; 
+GImageButton imgButton7; 
+GImageButton imgButton8; 
+GImageButton imgButton9; 
+GImageButton imgButton10; 
+GImageButton imgButton11; 
+GImageButton imgButton12; 
+GLabel label1; 
+GLabel label2; 
+GLabel label3; 
+GLabel label4; 
