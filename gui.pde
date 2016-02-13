@@ -69,25 +69,25 @@ public void createGUI(){
   surface.setTitle("Sketch Window");
   imgButton1 = new GImageButton(this, 32, 96, new String[] { "number 1.png", "number 1.png", "number 1.png" } , "Dial alpha mask.png");
   imgButton1.addEventHandler(this, "imgButton1_click1");
-  imgButton2 = new GImageButton(this, 112, 96, new String[] { "number 2.png", "number 2.png", "number 2.png" } );
+  imgButton2 = new GImageButton(this, 112, 96, new String[] { "number 2.png", "number 2.png", "number 2.png" } , "Dial alpha mask.png");
   imgButton2.addEventHandler(this, "imgButton2_click1");
-  imgButton3 = new GImageButton(this, 192, 96, new String[] { "number 3.png", "number 3.png", "number 3.png" } );
+  imgButton3 = new GImageButton(this, 192, 96, new String[] { "number 3.png", "number 3.png", "number 3.png" } , "Dial alpha mask.png");
   imgButton3.addEventHandler(this, "imgButton3_click1");
-  imgButton4 = new GImageButton(this, 32, 176, new String[] { "number 4.png", "number 4.png", "number 4.png" } );
+  imgButton4 = new GImageButton(this, 32, 176, new String[] { "number 4.png", "number 4.png", "number 4.png" } , "Dial alpha mask.png");
   imgButton4.addEventHandler(this, "imgButton4_click1");
-  imgButton5 = new GImageButton(this, 112, 176, new String[] { "number 5.png", "number 5.png", "number 5.png" } );
+  imgButton5 = new GImageButton(this, 112, 176, new String[] { "number 5.png", "number 5.png", "number 5.png" } , "Dial alpha mask.png");
   imgButton5.addEventHandler(this, "imgButton5_click1");
-  imgButton6 = new GImageButton(this, 192, 176, new String[] { "number 6.png", "number 6.png", "number 6.png" } );
+  imgButton6 = new GImageButton(this, 192, 176, new String[] { "number 6.png", "number 6.png", "number 6.png" } , "Dial alpha mask.png");
   imgButton6.addEventHandler(this, "imgButton6_click1");
-  imgButton7 = new GImageButton(this, 32, 256, new String[] { "number 7.png", "number 7.png", "number 7.png" } );
+  imgButton7 = new GImageButton(this, 32, 256, new String[] { "number 7.png", "number 7.png", "number 7.png" } , "Dial alpha mask.png");
   imgButton7.addEventHandler(this, "imgButton7_click1");
-  imgButton8 = new GImageButton(this, 112, 256, new String[] { "number 8.png", "number 8.png", "number 8.png" } );
+  imgButton8 = new GImageButton(this, 112, 256, new String[] { "number 8.png", "number 8.png", "number 8.png" } , "Dial alpha mask.png");
   imgButton8.addEventHandler(this, "imgButton8_click1");
-  imgButton9 = new GImageButton(this, 192, 256, new String[] { "number 9.png", "number 9.png", "number 9.png" } );
+  imgButton9 = new GImageButton(this, 192, 256, new String[] { "number 9.png", "number 9.png", "number 9.png" } , "Dial alpha mask.png");
   imgButton9.addEventHandler(this, "imgButton9_click1");
-  imgButton10 = new GImageButton(this, 32, 336, new String[] { "back.png", "back.png", "back.png" } );
+  imgButton10 = new GImageButton(this, 32, 336, new String[] { "back.png", "back.png", "back.png" } , "Dial alpha mask.png");
   imgButton10.addEventHandler(this, "imgButton10_click1");
-  imgButton11 = new GImageButton(this, 192, 336, new String[] { "number 0.png", "number 0.png", "number 0.png" } );
+  imgButton11 = new GImageButton(this, 192, 336, new String[] { "number 0.png", "number 0.png", "number 0.png" } , "Dial alpha mask.png");
   imgButton11.addEventHandler(this, "imgButton11_click1");
 }
 
