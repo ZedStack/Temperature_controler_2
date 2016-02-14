@@ -14,15 +14,20 @@ void setup() {
 	size       (800, 480, JAVA2D);
 	noFill     ();
 	stroke     (255);
-	background (20);
+	background (170);
 	frameRate  (60);
+
+	G4P.messagesEnabled      (false);
+	G4P.setGlobalColorScheme (GCScheme.BLUE_SCHEME);
+	G4P.setCursor            (ARROW);
+	surface.setTitle         ("Temperaturew controler");
 
 	complex = new Complex ((1.0/4.0) * width);
 	complex.setCoors      ((complex.getWidth () / 2) + 10, (complex.getHeight () / 2) + 10);
 	complex.createRooms   ();
 	complex.createSensors ();
 
-	dial = new Dial (width / 2.0, height / 2.0);
+	dial = new Dial    (width / 2.0, height / 2.0);
 	dial.createButtons ();
 
 	// complex.render ();
@@ -30,7 +35,7 @@ void setup() {
 }
 
 void draw() {
-	background(170);
+	// background(170);
 	// complex.render ();
 }
 
