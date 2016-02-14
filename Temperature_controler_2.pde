@@ -1,8 +1,10 @@
 // Imports
 import g4p_controls.*;
+import processing.core.PApplet;
 
 // Classes
 Complex complex;
+Dial dial;
 
 
 //- ## P R O C E S S I N G   S T A N D A R S ######################################################## -//
@@ -20,8 +22,11 @@ void setup() {
 	complex.createRooms   ();
 	complex.createSensors ();
 
+	dial = new Dial (width / 2.0, height / 2.0);
+	dial.createButtons ();
+
 	// complex.render ();
-	createGUI ();
+	// createGUI ();
 }
 
 void draw() {
