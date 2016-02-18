@@ -10,9 +10,9 @@ public class Dial {
 
 	private PApplet _PApplet;
 
-	// private ArrayList<GImageButton> buttons = new ArrayList<GImageButton> ();
-	private GImageButton [] _button;
-	public  GImageButton testButton;
+	private ArrayList<GImageButton> buttons = new ArrayList<GImageButton> ();
+	// private GImageButton [] _button;
+	private Coords [] _coord;
 
 	private String [][] _buttonSprite = new String [][] {
 		{"number 1.png", "number 1.png", "number 1.png"},
@@ -43,35 +43,55 @@ public class Dial {
 		this._dialWidth  = (this._numberSize * this._colums) + (this._numberSeparation * (this._colums - 1));
 		this._dialHeight = (this._numberSize * this._rows) + (this._numberSeparation * (this._rows - 1));
 
-		this._button = new GImageButton [int (this._rows * this._colums)];
+		// this._button = new GImageButton [int (this._rows * this._colums)];
+		this._coord  = new Coords [int (this._rows * this._colums)];
 	}
 
 	// public void buttonEvent (GImageButton source, GEvent event) {
 	// 	println("testButton - GImageButton >> GEvent." + event + " @ " + millis());
 	// }
 	// public void createButtons () {
-	// 	testButton = new GImageButton (
-	// 		this._PApplet,
-	// 		this._xAxis,
-	// 		this._yAxis,
-	// 		new String [] {"number 1.png", "number 1.png", "number 1.png"},
-	// 		"Dial alpha mask.png"
-	// 	);
-	// 	testButton.addEventHandler (this._PApplet, "buttonEvent");
+	// 	for (float rowIndex = 0.0; rowIndex < this._rows; ++rowIndex) {
+	// 		for (float columIndex = 0.0; columIndex < this._colums; ++columIndex) {
+	// 			println(rowIndex + " - " + columIndex + " - " + int (((rowIndex * this._colums) + columIndex)));
+	// 			this._coord [int (((rowIndex * this._colums) + columIndex))] = new Coords (0, 0);
+	// 		}
+	// 	}
 	// }
 
 	public void createButtons () {
-		for (float columIndex = 0.0; columIndex < this._colums; ++columIndex) {
-			for (float rowIndex = 0.0; rowIndex < this._rows; ++rowIndex) {
-				rect (
-					this._xAxis - ((1.0/2.0) * this._dialWidth) + (columIndex * this._numberSize) + (columIndex * this._numberSeparation),
-					this._yAxis - ((1.0/2.0) * this._dialHeight) + (rowIndex * this._numberSize) + (rowIndex * this._numberSeparation),
-					this._numberSize,
-					this._numberSize
+		for (float rowIndex = 0.0; rowIndex < this._rows; ++rowIndex) {
+			for (float columIndex = 0.0; columIndex < this._colums; ++columIndex) {
+				println(rowIndex + " - " + columIndex + " - " + int (((rowIndex * this._colums) + columIndex)));
+				// this._coord [int (((rowIndex * this._colums) + columIndex))] = new Coords (0, 0);
+			
+				buttons.add (
+					new GImageButton ( // Error: NullPointerException
+						this._PApplet,
+						// this._xAxis,
+						// this._yAxis,
+						int (this._xAxis - ((1.0/2.0) * this._dialWidth) + (rowIndex * this._numberSize) + (rowIndex * this._numberSeparation)),
+						int (this._yAxis - ((1.0/2.0) * this._dialHeight) + (columIndex * this._numberSize) + (columIndex * this._numberSeparation)),
+						this._buttonSprite [int (((rowIndex * this._colums) + columIndex))],
+						"Dial alpha mask.png"
+					)
 				);
 			}
 		}
 	}
+
+	// public void createButtons () {
+	// 	for (float columIndex = 0.0; columIndex < this._colums; ++columIndex) {
+	// 		for (float rowIndex = 0.0; rowIndex < this._rows; ++rowIndex) {
+	// 			rect (
+	// 				this._xAxis - ((1.0/2.0) * this._dialWidth) + (columIndex * this._numberSize) + (columIndex * this._numberSeparation),
+	// 				this._yAxis - ((1.0/2.0) * this._dialHeight) + (rowIndex * this._numberSize) + (rowIndex * this._numberSeparation),
+	// 				this._numberSize,
+	// 				this._numberSize
+	// 			);
+	// 		}
+	// 	}
+	// }
 
 	// public void createButtons () {
 	// 	for (float rowIndex = 0.0; rowIndex < this._rows; ++rowIndex) {
