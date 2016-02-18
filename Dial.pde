@@ -12,7 +12,7 @@ public class Dial {
 
 	// private ArrayList<GImageButton> buttons = new ArrayList<GImageButton> ();
 	private GImageButton [] _button;
-	public GImageButton testButton;
+	public  GImageButton testButton;
 
 	private String [][] _buttonSprite = new String [][] {
 		{"number 1.png", "number 1.png", "number 1.png"},
